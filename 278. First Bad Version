@@ -2,22 +2,24 @@
       boolean isBadVersion(int version); */
 
 public class Solution extends VersionControl {
-    public int firstBadVersion(int n) {
-        if(isBadversion(n+2) && isBadversion(n+1)  && !isBadversion(n-1))  {
-            return n; 
+       public int firstBadVersion(int n) {
+      
+        if(isBadVersion(n+2) && isBadVersion(n+1)  && !isBadVersion(n-1))  {
+            return n+1; 
+        }
+         if(isBadVersion(n+2) && !isBadVersion(n+1)  && !isBadVersion(n-1))  {
+            return n+2; 
         }
         
-        else if(!isBadversion(n-1) && !isBadversion(n+1)){
+        else if(!isBadVersion(n-1) && !isBadVersion(n+1)){
             return firstBadVersion(n*2); 
         }
         
-        else if(isBadversion(n-1) && isBadversion(n+1) ){
+        else if(isBadVersion(n-1) && isBadVersion(n+1) ){
             return firstBadVersion(n/2); 
         }
         
-        else if(isBadversion(n+2) && !isBadversion(n+1)  && !isBadversion(n-1))  {
-            return n+1; 
-        }
-        
+       
+          return 1;
     }
 }
