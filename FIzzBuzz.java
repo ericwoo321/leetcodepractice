@@ -1,5 +1,6 @@
 class Solution {
     public List<String> fizzBuzz(int n) {
+        //returns an array list of Fizz,buzz,fizzbuzz and number strings
         ArrayList <String> result = new ArrayList<>();  
         if(n==1){
              result.add(1+"");
