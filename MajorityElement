@@ -1,0 +1,26 @@
+public class MajorityElement {
+	 public int majorityElement(int[] nums) {
+	        int large=0;
+	        int temp =0; 
+	        int result =0;
+	        //Loops through each element ant counts the largest number of occurrences 
+	        for(int i=0; i<nums.length;i++){
+	            for(int j =0; j<nums.length;j++){
+	                if(nums[i] == nums[j]){
+	                    temp++;
+	                }
+	            }
+	            if(temp > large){
+	               large =temp; 
+	                result = nums[i];
+	                //breaks as soon as largest number of occurrences exceeds n/2
+	                if(large>nums.length/2){
+	                    return result;
+	                }
+	            }
+	            temp =0; 
+	        }
+	        
+	        return result;
+	    }
+}
