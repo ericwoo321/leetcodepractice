@@ -13,7 +13,7 @@ public class MajorityElement {
 	            if(temp > large){
 	               large =temp; 
 	                result = nums[i];
-	                //breaks as soon as largest number of occurrences exceeds n/2
+	                //breaks as soon as largest number of occurrences exceeds n/2 to adhere to time limit
 	                if(large>nums.length/2){
 	                    return result;
 	                }
