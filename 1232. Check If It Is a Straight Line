@@ -1,18 +1,19 @@
 class Solution {
     static int point =0;
     public boolean checkStraightLine(int[][] coordinates) {
-        if(point == coordinates.length){
+        if(point == coordinates.length-2){
             return coordinates[coordinates.length-1][0] - coordinates[coordinates.length-2][0] == 1
                 &&  coordinates[coordinates.length-1][1] - coordinates[coordinates.length-2][1] == 1; 
         }
         
         else 
             point++; 
-            return  coordinates[point][0] - coordinates[point+1][0] == 1
-                &&  coordinates[point][1] - coordinates[point+1][1] == 1 
+            return  coordinates[point+1][0] - coordinates[point][0] == 1
+                &&  coordinates[point+1][1] - coordinates[point][1] == 1 
                 && checkStraightLine(coordinates); 
         
     }
     
    
+}
 }
