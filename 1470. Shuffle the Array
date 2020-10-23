@@ -2,8 +2,8 @@ class Solution {
     public int[] shuffle(int[] nums, int n) {
         int [] result = new int[2*n]; 
         
-        int xIndex =0;
-        int numIndex =0;
+        int xIndex = 0;
+        int numIndex = 0;
         while(numIndex <= n-1){
             result[xIndex] = nums[numIndex];
             xIndex= xIndex+2;
@@ -11,8 +11,8 @@ class Solution {
         }
         
         
-        int yIndex =1;
-        numIndex =n; 
+        int yIndex = 1;
+        numIndex = n; 
         while(numIndex <= 2*n-1){
             result[yIndex] = nums[numIndex];
             yIndex = yIndex+2; 
